@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 
 
-public class TestDriver extends TestBase {
+public class PIMTest extends TestBase {
 
 
 

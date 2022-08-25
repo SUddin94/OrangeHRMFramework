@@ -4,7 +4,6 @@ import browser.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,6 +15,7 @@ public class PIMPage {
 
 //    @FindBy(linkText = "Recruitment") private WebElement recruitmentLink;
     @FindBy(css = "button[type='submit']") private WebElement submitButton;
+    @FindBy(linkText = "Admin") private WebElement adminPageLink;
 
 //    public RecruitmentPage navigateToRecruitmentPage(){
 //        recruitmentLink.click();
@@ -36,5 +36,10 @@ public class PIMPage {
         elements.get(2).getText().compareTo(firstName);
         elements.get(3).getText().compareTo(lastName);
         return this;
+    }
+
+    public AdminPage navigateToAdmin(){
+        adminPageLink.click();
+        return PageFactory.initElements(Browser.driver,AdminPage.class);
     }
 }
