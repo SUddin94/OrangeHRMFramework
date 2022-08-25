@@ -12,7 +12,7 @@ public class LoginPage {
     @FindBy(css = "input[name = 'password']") private WebElement password;
     @FindBy(css = ".orangehrm-login-button") private WebElement loginButton;
 
-    public PIMPage login(){
+    public PIMPage loginToPIMPage(){
         userName.sendKeys(Info.USER_NAME);
         password.sendKeys(Info.PASSWORD);
         loginButton.click();
